@@ -1,10 +1,10 @@
 # Publication flow [in progress]
 
-De publication flow omvat het proces om besluiten te publiceren in het Belgisch Staatsblad. Zo’n besluit kan het resultaat zijn van een besluitvormingsaangelegenheid van de VR of aangeleverd worden via een andere weg.
+De publication flow omvat het proces om besluiten in te dienen ter publicatie bij het Belgisch Staatsblad. Zo’n besluit kan het resultaat zijn van een besluitvormingsaangelegenheid van de Vlaamse Regering met behandeling door de Ministerraad (MR), door een mandataris bij delegatie (bijvoorbeeld een Ministerieel Beslui) of aangeleverd worden via een andere weg (bijvoorbeeld door een instantie van de federale overheid).
 
-De publication flow gaat uit van ondertekende documenten als startpunt. De hele handteken-procedure wordt daarom onafhankelijk gezien van de publication flow.
+De publication flow gaat principieel uit van ondertekende documenten als startpunt. In de praktijk is side tracking mogelijk. De hele handteken-procedure wordt daarom onafhankelijk gezien van de publication flow.
 
-De publication-flow valt buiten de scope van het OSLO Besluitvorming AP. Er zijn echter wel gelijkenissen en raakpunten. Waar mogelijk worden concepten uit het Besluitvorming AP gebruikt. Deze worden aangevuld met nieuw gedefinieerde concepten in de `pub`-namespace (`http://mu.semte.ch/vocabularies/ext/publication/`).
+De publication-flow valt buiten de scope van het OSLO Besluitvorming AP(toegepast datamodel). Er zijn echter wel gelijkenissen en raakpunten. Waar mogelijk worden concepten uit het Besluitvorming AP gebruikt. Deze worden aangevuld met nieuw gedefinieerde concepten in de `pub`-namespace (`http://mu.semte.ch/vocabularies/ext/publication/`).
 
 ![Data model](../images/publication-flow-data-model.svg)
 
@@ -36,7 +36,7 @@ Elk van de statussen is een `skos:Concept` die deel uitmaken van eenzelfde `skos
 
 Om publicaties te kunnen opvolgen wil men de datum van de laatste statuswijziging bijhouden. Dit gebeurt via een `pub:PublicatieStatusWijziging < prov:Activity`. Momenteel wordt enkel de laatste wijzing bijgehouden. De eigenschap `prov:startedAtTime` bevat het tijdstip van de wijziging. De `pub:PublicatieStatusWijziging` is via `prov:hadActivity` gerelateerd aan de publicatieaangelegenheid. Op ieder moment bevat de `pub:PublicatieStatusWijziging` die gerelateerd is aan de publicatieaangelegenheid het tijdstip waarop de huidige status van de publicatieaangelegenheid gezet is.
 
-Wanneer de status gewijzigd wordt naar afgevoerd of gepubliceerd, betekent dit ook dat de een sluitingsdatum (`dossier:sluitingsdatum`) gezet wordt alsook de einddatum (`dossier:Procedurestap.einddatum`) op de bijhorende procedurestappen indien deze nog niet ingevuld zijn.
+Wanneer de status gewijzigd wordt naar afgevoerd of gepubliceerd, betekent dit ook dat een sluitingsdatum (`dossier:sluitingsdatum`) gezet wordt alsook de einddatum (`dossier:Procedurestap.einddatum`) op de bijhorende procedurestappen indien deze nog niet ingevuld zijn.
 
 # Procedure
 Iedere publication flow omvat volgende, vaste procedurestappen:
